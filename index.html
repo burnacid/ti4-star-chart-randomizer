@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/webstorm-icon-logo.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TI4 - Star Chart Randomizer</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="logo">
+
+</header>
+<main id="app">
+  <h1 class="title">
+    Twilight Imperium 4 - Star Chart Randomizer
+  </h1>
+  <form>
+    <h1>Import Milty Draft</h1>
+    <fieldset>
+      <p>You can import your milty draft settings from https://milty.shenanigans.be by entering your milty URL</p>
+      <div>
+        <label for="miltyurl">Milty URL</label>
+        <input type="text" id="miltyurl" name="miltyurl" value="https://milty.shenanigans.be/d/67b1e1c6864ec" />
+      </div>
+
+      <input id='loadButton' type="button" value="Load Data" />
+    </fieldset>
+    <h2>Custom Settings</h2>
+
+    <fieldset>
+      <label for="slices">In play slices</label>
+      <small>Comma Separated list of all number tiles in play</small>
+      <input type="text" id="slices" name="slices" />
+      <h3>Game Settings</h3>
+      <label for="pok-tiles"><input type="checkbox" id="pok-tiles" name="pok-tiles" />Prophecy of Kings tiles</label>
+      <label for="ds-tiles"><input type="checkbox" id="ds-tiles" name="ds-tiles" />Discordant Stars Plus tiles</label>
+    </fieldset>
+
+    <input id='getTile' type="button" value="Select random Star Chart tile" />
+  </form>
+
+  <div id="number">
+  </div>
+  <div id="planetsInfo">
+  </div>
+
+</main>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
